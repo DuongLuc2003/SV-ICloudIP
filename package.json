@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "server": "nodemon --experimental-specifier-resolution=node src/server.js",
-    "build":"npm run clean && npm build-babel",
+    "build":"npm build-babel",
     "production":"npm run build && cross-env BUILD_MODE=production node ./build/src/server.js",
     "start": "node src/server.js"
   },
