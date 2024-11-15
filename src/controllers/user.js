@@ -1,8 +1,5 @@
 import User from "../models/user.js";
 import Joi from 'joi'
-import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
-import multer from 'multer';
 import cloudinary from 'cloudinary';
           
 cloudinary.config({ 
