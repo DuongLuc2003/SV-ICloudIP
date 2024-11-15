@@ -33,8 +33,7 @@ app.use(express.static('src/public'));
 
 // Routing
 app.get('/', function (req, res) {
-
-  res.end(__dirname);
+  res.send("<h1>Connect server succesfully</h1>");
 });
 
 // Router
