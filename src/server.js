@@ -13,7 +13,10 @@ export const __dirname = dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 8080;
-
+//Username:lucck131103 
+//Password:luc20032003
+//CamIcloud
+//dcvyWeIcdL4IxjJt
 // Middleware for CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -43,10 +46,13 @@ app.use('/auth', userRouter);
 app.use('/categories', categories);
 
 
+const MONGODB_URI = 'mongodb+srv://lucck131103:dcvyWeIcdL4IxjJt@cluster-camicloudip.5816x.mongodb.net/';
+
+// Kết nối đến MongoDB
 mongoose
-  .connect('mongodb://localhost:27017/MyDatabase')
-  .then(() => console.log('Connect to DB successfully'))
-  .catch((error) => console.error('Error connecting to DB:', error));
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB Atlas successfully'))
+  .catch((error) => console.error('Error connecting to MongoDB Atlas:', error));
 
 app.listen(port, function () {
   console.log(`Server is running on localhost:${port}`);
